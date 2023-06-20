@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        DEVICE: [pinephone,pinephonepro]
+        DEVICE: [fajita]
         EDITION: [plasma-mobile]
         BRANCH: [unstable]
     steps:
@@ -24,8 +24,9 @@ jobs:
           format: 'YYYYMMDDHHmm'
       -
         id: image-build
-        uses: manjaro-arm/rootfs@master
+        uses: silime/phosh@master
         with:
+          arm-profiles-repo: https://github.com/silime/arm-profiles
           device: ${{ matrix.device }}
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}

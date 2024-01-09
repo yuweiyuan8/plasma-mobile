@@ -24,7 +24,7 @@ jobs:
           format: 'YYYYMMDDHHmm'
       -
         id: image-build
-        uses: silime/phosh@master
+        uses: yuweiyuan8/phosh@master
         with:
           arm-profiles-repo: https://github.com/yuweiyuan8/arm-profiles
           device: ${{ matrix.device }}

@@ -26,7 +26,7 @@ jobs:
         id: image-build
         uses: silime/phosh@master
         with:
-          arm-profiles-repo: https://github.com/silime/arm-profiles
+          arm-profiles-repo: https://github.com/yuweiyuan8/arm-profiles
           device: ${{ matrix.device }}
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}
